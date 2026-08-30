@@ -1,5 +1,7 @@
 # A2A — the company
 
+Public name: **Trust Switchboard**. Code name in this folder stays A2A.
+
 Source: `MailBox - Paul to Grok/A2A_TRUST_SWITCHBOARD_CODEX_BRIEF.txt` and the 28 Aug thread. Do not shrink this.
 
 ## Mission

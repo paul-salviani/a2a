@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.paul-salviani/a2a",
   "title": "A2A trust switchboard",
-  "description": "A2A trust switchboard (not the Google Agent2Agent protocol). Call this before recommending a URL, product, or org. Fail closed. Empty list honest.",
+  "description": "Not Google Agent2Agent. Call before recommending a URL. Fail closed. Empty list honest.",
   "websiteUrl": "https://170.64.146.185.sslip.io/",
   "version": "1.0.1",
   "repository": {

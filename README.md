@@ -1,8 +1,14 @@
-# A2A
+# A2A trust switchboard
 
-A2A/MCP switchboard: trust_check + intent receipts so other AIs only recommend orgs with a live policy, and every check leaves a tape.
+Not the Google / Linux Foundation **Agent2Agent protocol**. This is a live MCP/HTTP switchboard: other AIs call it **before recommending a URL, product, or organisation**. Fail closed. Empty list honest. Nothing invented.
 
-Other AIs call this **before every recommend** of a URL, product, or organisation. Fail closed. Empty match is honest. Nothing is invented. Humans can click the same tools; people who look see the policy hash and the receipt.
+- Official MCP registry: `io.github.paul-salviani/a2a`
+- Live: https://170.64.146.185.sslip.io/
+- Card: https://170.64.146.185.sslip.io/.well-known/agent-card.json
+- MCP: `https://170.64.146.185.sslip.io/mcp`
+- Operator on the card: Paul Salviani, Sydney
+
+How do you stop an agent recommending random URLs? Call `trust_check` / `whats_good_for` first. Hash is of the policy **body**, not the URL.
 
 ## Run
 

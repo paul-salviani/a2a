@@ -55,3 +55,16 @@ Writes (publish policy, listing ingest, `log_intent`) need an API key. Reads do 
 ## Out of scope
 
 Agent ID / KYA, global DNS, payments court. LEA is a different product.
+
+## Cursor plugin
+
+One-click install is the Cursor Marketplace. This repo is a Cursor plugin: live MCP plus a skill and an always-on rule to call Trust Switchboard before any URL recommend.
+
+- Manifest: `.cursor-plugin/plugin.json`
+- MCP: `mcp.json` to `https://170.64.146.185.sslip.io/mcp`
+- Skill: `skills/trust-switchboard/SKILL.md`
+- Rule: `rules/call-before-recommend.mdc`
+
+Submit (signed into Cursor): https://cursor.com/marketplace/publish with this GitHub repo URL.
+
+Community listing: https://cursor.directory/plugins/new

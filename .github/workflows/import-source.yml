@@ -1,0 +1,51 @@
+name: Import copyable CODE
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch CODE from live origin
+        run: |
+          set -euo pipefail
+          curl -fsSL -o /tmp/source.tar.gz https://170.64.146.185.sslip.io/source.tar.gz
+          python3 - <<'PY'
+          import tarfile, pathlib
+          root = pathlib.Path('.')
+          banned = ('.env', 'seed.json')
+          with tarfile.open('/tmp/source.tar.gz', 'r:gz') as tar:
+              for m in tar.getmembers():
+                  if not m.isfile():
+                      continue
+                  name = m.name
+                  if name.startswith('a2a/'):
+                      name = name[4:]
+                  name = name.lstrip('/')
+                  if not name:
+                      continue
+                  low = name.lower()
+                  if low in banned or low.endswith('.sqlite') or '/.env' in low or low.endswith('/seed.json'):
+                      raise SystemExit('refused secret path ' + name)
+                  dest = root / name
+                  dest.parent.mkdir(parents=True, exist_ok=True)
+                  src = tar.extractfile(m)
+                  if src is None:
+                      continue
+                  dest.write_bytes(src.read())
+                  print('wrote', dest.as_posix())
+          PY
+      - name: Commit
+        run: |
+          git config user.name "paul-salviani"
+          git config user.email "302134795+paul-salviani@users.noreply.github.com"
+          git add -A
+          git status
+          if git diff --cached --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "Copyable CODE from live /source.tar.gz. No sqlite, no .env, no seed.json."
+          git push

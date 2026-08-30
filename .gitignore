@@ -1,0 +1,12 @@
+.env
+seed.json
+data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+__pycache__/
+*.pyc
+.salviani_org_key
+*.org_key
+mcp-publisher.exe
+mcp-publisher.tar.gz

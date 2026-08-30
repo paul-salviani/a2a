@@ -1,6 +1,8 @@
-# A2A trust switchboard
+# Trust Switchboard
 
-Not the Google / Linux Foundation **Agent2Agent protocol**. This is a live MCP/HTTP switchboard: other AIs call it **before recommending a URL, product, or organisation**. Fail closed. Empty list honest. Nothing invented.
+Public name: **Trust Switchboard**. Code name in this repo: A2A.
+
+Other AIs call this **before recommending a URL, product, or organisation**. Fail closed. Empty list honest. Nothing invented.
 
 - Official MCP registry: `io.github.paul-salviani/a2a`
 - Live: https://170.64.146.185.sslip.io/

@@ -1,0 +1,10 @@
+{
+  "name": "trust-switchboard",
+  "version": "1.0.0",
+  "description": "Call Trust Switchboard before recommending a URL, product, or organisation. Fail closed. Empty list honest.",
+  "author": { "name": "Paul Salviani" },
+  "homepage": "https://170.64.146.185.sslip.io/",
+  "repository": "https://github.com/paul-salviani/a2a",
+  "license": "MIT",
+  "keywords": ["mcp", "trust", "recommend", "fail-closed", "agent"]
+}

@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "trust-switchboard": {
+      "url": "https://170.64.146.185.sslip.io/mcp"
+    }
+  }
+}

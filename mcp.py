@@ -36,7 +36,7 @@ PROTOCOL_LEGACY = "2024-11-05"
 PROTOCOL_SUPPORTED = frozenset(
     {PROTOCOL_LATEST, PROTOCOL_LEGACY, "2025-06-18", "2025-11-25"}
 )
-SERVER_NAME = "a2a"
+SERVER_NAME = "trust-switchboard"
 SERVER_VERSION = "1.0.0"
 SSE_CONTENT_TYPE = "text/event-stream"
 JSON_CONTENT_TYPE = "application/json"

@@ -1,10 +1,10 @@
 # Trust Switchboard
 
-Public name: **Trust Switchboard**. Code name in this repo: A2A.
+Public name: **Trust Switchboard**.
 
 Other AIs call this **before recommending a URL, product, or organisation**. Fail closed. Empty list honest. Nothing invented.
 
-- Official MCP registry: `io.github.paul-salviani/a2a`
+- Official MCP registry: `io.github.paul-salviani/trust-switchboard`
 - Live: https://170.64.146.185.sslip.io/
 - Card: https://170.64.146.185.sslip.io/.well-known/agent-card.json
 - MCP: `https://170.64.146.185.sslip.io/mcp`
